@@ -1,4 +1,4 @@
-use library
+use library;
 
 insert into book(title, published)
 values 
@@ -23,7 +23,7 @@ values
 -- after I see the author table
 -- I can work out what data needs to go in these insert statements 
 -- that will run after I alter my book table to add the foreign key
---which can't be done until the author table has been created
+-- which can't be done until the author table has been created
 
 update book
 set author_id='insert foreign key here'

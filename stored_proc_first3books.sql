@@ -1,6 +1,6 @@
 use library;
 
--- attempt at creating a stored procedure to grab 10 rows of data
+-- attempt at creating a stored procedure to grab 3 rows of data
 
 DELIMITER //
 
@@ -13,4 +13,3 @@ DELIMITER ;
 
 CALL SelectFirst3Books();
 
--- I have no idea if this will work as I have no data yet to test it on but I am getting excited now about this project coming together
