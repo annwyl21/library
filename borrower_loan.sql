@@ -16,3 +16,6 @@ borrower_id int NULL,
 loan_date date,
 foreign key (borrower_id) references borrower(borrower_id));
 
+ALTER TABLE book_loan
+ADD COLUMN book_id int,
+ADD foreign key (book_id) references book (book_id);
