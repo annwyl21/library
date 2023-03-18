@@ -10,6 +10,7 @@ published int null
 
 -- I think I have to add the foreign key separately because the author table is not yet created
 ALTER TABLE book
+ADD COLUMN author_id int,
 ADD foreign key(author_id) references author(author_id);
 
 -- a test statement to bring back only the first 3 rows to confirm it works
