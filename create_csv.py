@@ -4,9 +4,7 @@ import pandas as pd
 
 import mysql.connector
 
-cnx = mysql.connector.connect(user='root', password='password',
-                              host='127.0.0.1',
-                              database='library')
+cnx = mysql.connector.connect(user='root',password='password',host='127.0.0.1',database='library')
 
 
 # https://learn.microsoft.com/en-us/sql/connect/python/pyodbc/step-3-proof-of-concept-connecting-to-sql-using-pyodbc?view=sql-server-ver16
@@ -27,8 +25,9 @@ print("started...")
 query='CALL SelectFirst3Books();'
 
 results=pd.read_sql_query(query, cnx)
-results.to_csv("book_data.csv", index=False)
+results.to_csv("book_data.csv")
 print(results)
+
 print("completed")
 
 cnx.close()
