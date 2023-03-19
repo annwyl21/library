@@ -1,6 +1,15 @@
--- inserting data into library table created
 use library;
 
+-- creating author table
+CREATE TABLE author
+
+(author_id int not null auto_increment primary key,
+first_name varchar(50),
+last_name varchar(50),
+title varchar(10)
+);
+
+-- inserting data into author table 
 INSERT INTO author(first_name, last_name, title)
 values
 (1, 'Caroline', 'Criado Perez', 'OBE'),
