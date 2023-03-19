@@ -1,4 +1,4 @@
-# library
+# Library
 SQL database for library
 Salma, Michelle, Shade, Mati, Ellen
 
