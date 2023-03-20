@@ -96,3 +96,31 @@ values
 (2,2,'2023-03-13');
 
 ALTER TABLE book_loan MODIFY loan_date date AFTER book_id;
+
+update borrower
+set address_id = '1'
+where borrower_id = '1';
+
+update borrower
+set address_id = '1'
+where borrower_id = '2';
+
+update borrower
+set address_id = '1'
+where borrower_id = '3';
+
+update borrower
+set address_id = '3'
+where borrower_id = '4';
+
+update borrower
+set address_id = '5'
+where borrower_id = '5';
+
+update borrower
+set address_id = '8'
+where borrower_id = '8';
+
+update borrower
+set address_id = '2'
+where borrower_id = '10';
