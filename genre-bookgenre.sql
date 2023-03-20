@@ -6,22 +6,26 @@ create table genre
 (genre_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 genre_type VARCHAR(100) NOT NULL);
 
-INSERT INTO genre (genre_id, genre_type)
+INSERT INTO genre (genre_type)
 VALUES 
-(1, 'Non-fiction: History'),
-(2, 'Non-fiction: Philosophy'),
-(3, 'Non-fiction: Geography'),
-(4, 'Non-fiction: Biology'),
-(5, 'Non-fiction: Chemistry'),
+('Non-fiction: History'),
+('Non-fiction: Philosophy'),
+('Non-fiction: Geography'),
+('Non-fiction: Biology'),
+('Non-fiction: Chemistry'),
 
-(6, 'Fiction: Science Fiction'),
-(7, 'Fiction: Thriller'),
-(8, 'Fiction: Fantasy'),
-(9, 'Fiction: Romance'),
-(10,'Fiction: Adventure');
+('Fiction: Science Fiction'),
+('Fiction: Thriller'),
+('Fiction: Fantasy'),
+('Fiction: Romance'),
+('Fiction: Adventure');
 
 select *
 from genre;
+
+ALTER TABLE book
+ADD COLUMN genre_id int,
+ADD foreign key (genre_id) references genre(genre_id);
 
 create table book_genre
 (genre_id INT NOT NULL);
