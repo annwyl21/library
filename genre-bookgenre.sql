@@ -29,7 +29,10 @@ ADD foreign key (genre_id) references genre(genre_id);
 
 create table book_genre
 (genre_id INT NOT NULL);
--- FOREIGN KEY (book_id) REFERENCES book (book_id) 
+
+ALTER TABLE book_genre
+ADD COLUMN book_id INT,
+ADD FOREIGN KEY (book_id) REFERENCES book (book_id); 
 
 
 
