@@ -14,6 +14,7 @@ values
     ('Collected Poems and Plays of Rabindranath Tagore', null, 9),
     ('Noughts and Crosses', null, 10);
 
-rollback;
--- commit;
+-- if we ran this transactional statement to test the insert we could use the rollback statement to ensure nothing was changed and then change it to commit if we got no errors.
+-- rollback;
+commit;
 

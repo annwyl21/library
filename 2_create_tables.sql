@@ -39,10 +39,8 @@ phone varchar(50)
 CREATE TABLE book_loan
 (loan_id int not null auto_increment primary key,
 borrower_id int  NULL,
-book_id int  NULL,
 loan_date date,
-foreign key (borrower_id) references borrower(borrower_id),
-foreign key (book_id) references book(book_id)
+foreign key (borrower_id) references borrower(borrower_id)
 );
 
 -- create table genre

@@ -16,3 +16,6 @@ FROM borrower;
 SELECT *
 FROM book_loan;
 
+select *
+from book;
+
