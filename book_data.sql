@@ -41,3 +41,4 @@ values
     ('Noughts and Crosses', null, 10);
 
 rollback;
+-- commit;
