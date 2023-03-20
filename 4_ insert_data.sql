@@ -81,16 +81,18 @@ values
   ('Noah', 'Bailey', 'noah.bailey@example.com', '07912345678');
 
 -- insert data into book_loan table
-INSERT INTO book_loan(loan_date)
-values
-('2023-03-22'),
-  ('2023-03-08'),
-  ('2023-04-09'),
-  ('2023-04-06'),
-  ('2023-04-01'),
-  ('2023-03-19'),
-  ('2023-03-30'),
-  ('2023-04-10'),
-  ('2023-03-25'),
-  ('2023-03-13');
 
+INSERT INTO book_loan(borrower_id,book_id,loan_date)
+values
+(3,2,'2023-03-22'),
+(4,3,'2023-03-08'),
+(5,3,'2023-04-09'),
+(6,2,'2023-04-06'),
+(7,1,'2023-04-01'),
+(8,1,'2023-03-19'),
+(9,2,'2023-03-30'),
+(10,3,'2023-04-10'),
+(1,2,'2023-03-25'),
+(2,2,'2023-03-13');
+
+ALTER TABLE book_loan MODIFY loan_date date AFTER book_id;
