@@ -124,3 +124,36 @@ where borrower_id = '8';
 update borrower
 set address_id = '2'
 where borrower_id = '10';
+
+INSERT INTO genre (genre_type)
+VALUES
+('feminism'),
+('data');
+
+INSERT INTO genre (genre_type)
+VALUES
+
+('Non-fiction: Autobiography');
+
+INSERT INTO genre (genre_type)
+VALUES
+
+('Fiction: Satire');
+
+INSERT INTO genre (genre_type)
+VALUES
+
+('Fiction: Children');
+
+INSERT INTO genre (genre_type)
+VALUES
+
+('Poetry');
+
+INSERT INTO genre (genre_type)
+VALUES
+
+('Non-fiction:Gothic');
+
+select *
+from genre
