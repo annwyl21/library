@@ -18,7 +18,7 @@ results=pd.read_sql_query(query, cnx)
 
 # https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.to_csv.html
 # take my data and convert it into a csv format and call that csv file 'book_data.csv'
-results.to_csv("book_data.csv")
+results.to_csv("9_book_data.csv")
 
 # print the stored data to the console
 print(results.head())

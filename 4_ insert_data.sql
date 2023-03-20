@@ -35,6 +35,12 @@ values
 ('Malorie', 'Blackman', 'OBE');
 -- Malorie Blackman wrote a book called 'Noughts and Crosses'
 
+-- insert an extra author into author table
+INSERT INTO author(first_name, last_name, title)
+values
+('David', 'Nott', 'MD');
+-- he wrote War Doctor
+
 -- insert into book table
 insert into book(title, published)
 values 
