@@ -1,3 +1,5 @@
+-- replace street address with 'address unknown' if the value shows null
+
 SELECT IFNULL(street, 'address unknown') FROM address;
 
 select
