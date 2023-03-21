@@ -1,3 +1,5 @@
+-- join borrower, book_loan, address, author to create a 4 table join that shows overdue books and notifies us where the address is unknown
+
 select
 	book_loan.loan_date as Overdue,
 	concat(borrower.first_name, ' ', borrower.last_name) as 'Borrower',
@@ -15,3 +17,14 @@ inner join author
 on author.author_id = book.author_id;
 where loan_date < curdate();
 -- where address.street is null;
+
+-- join 3 tables
+-- Join book title from books, with genre type from genre, using the bridging table called book-genre
+select
+	book.title,
+    genre.genre_type
+from book_genre
+inner join book
+on book.book_id = book_genre.book_id
+inner join genre
+on genre.genre_id = book_genre.genre_id;
