@@ -38,3 +38,17 @@ VALUES
 (9, 16),
 (10, 9),
 (10, 17); 
+
+-- practice transaction statement 
+
+START TRANSACTION;
+INSERT into borrower(first_name,last_name)
+values
+('Salma','Salma'),
+('Salma','Salma'),
+('Salma','Salma'),
+('Salma','Salma'),
+('Salma','Salma');
+
+rollback;
+
