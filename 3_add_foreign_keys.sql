@@ -15,13 +15,3 @@ ALTER TABLE borrower
 ADD COLUMN address_id int,
 ADD foreign key (address_id) references address(address_id);
 
-ALTER TABLE book
-ADD COLUMN genre_id int,
-ADD foreign key (genre_id) references genre(genre_id);
-
-create table book_genre
-(genre_id INT NOT NULL);
-
-ALTER TABLE book_genre
-ADD COLUMN book_id INT,
-ADD FOREIGN KEY (book_id) REFERENCES book (book_id); 

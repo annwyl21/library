@@ -43,21 +43,5 @@ loan_date date,
 foreign key (borrower_id) references borrower(borrower_id)
 );
 
-create table genre
-(genre_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-genre_type VARCHAR(100) NOT NULL);
 
-INSERT INTO genre (genre_type)
-VALUES 
-('Non-fiction: History'),
-('Non-fiction: Philosophy'),
-('Non-fiction: Geography'),
-('Non-fiction: Biology'),
-('Non-fiction: Chemistry'),
-
-('Fiction: Science Fiction'),
-('Fiction: Thriller'),
-('Fiction: Fantasy'),
-('Fiction: Romance'),
-('Fiction: Adventure');
 
