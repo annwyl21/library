@@ -5,7 +5,7 @@ select
 	concat(borrower.first_name, ' ', borrower.last_name) as 'Borrower',
     ifnull (address.street, 'address unknown') as 'Street Address',
     book.title as 'Book on Loan',
-    concat(author.first_name, ' ', author.last_name, ' ', author.title) as Author
+    concat(author.first_name, ' ', author.last_name, ' ', author.title) as 'Author'
 from borrower
 inner join book_loan
 on book_loan.borrower_id = borrower.borrower_id
@@ -30,3 +30,4 @@ inner join book
 on book.book_id = book_genre.book_id
 inner join genre
 on genre.genre_id = book_genre.genre_id;
+
