@@ -1,3 +1,7 @@
+-- There is additional data that needs to be inserted into the book_genre table located in file 6,
+-- after the transactional statement where the books are inserted. 
+-- It had to go there because the book genre data references some of that data inserted as part of the transactional statement.
+
 -- create genre table
 create table genre
 (genre_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
