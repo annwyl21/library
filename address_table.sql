@@ -1,3 +1,5 @@
+-- NOTE: This file will create the address table but because the primary key has been manually encoded instead of left blank to auto-increment, it will not work with other insert statements
+
 use library;
 
 INSERT INTO address (address_id, house_number, building, street, city, postcode)
