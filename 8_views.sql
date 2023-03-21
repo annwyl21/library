@@ -10,3 +10,11 @@ from author
 inner join book
 on book.author_id = author.author_id;
 
+-- view book collection
+CREATE VIEW vw_bookcollection
+AS
+SELECT a.author_id, a.first_name, a.last_name, b.title
+FROM book as b
+JOIN author as a
+ON a.author_id = b.book_id;
+
