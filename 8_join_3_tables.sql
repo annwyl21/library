@@ -18,7 +18,9 @@ on author.author_id = book.author_id
 where loan_date < curdate();
 -- where address.street is null;
 
--- join 3 tables
+-- join 3 tables to turn this less readable briding table into data
+select * from book_genre;
+
 -- Join book title from books, with genre type from genre, using the bridging table called book-genre
 select
 	book.title,
