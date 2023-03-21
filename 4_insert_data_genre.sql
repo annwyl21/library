@@ -22,10 +22,6 @@ VALUES
 ('Fiction: Romance'),
 ('Fiction: Adventure');
 
-ALTER TABLE book
-ADD COLUMN genre_id int,
-ADD foreign key (genre_id) references genre(genre_id);
-
 create table book_genre
 (genre_id INT NOT NULL);
 
