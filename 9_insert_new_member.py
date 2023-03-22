@@ -1,11 +1,11 @@
 import mysql.connector
 
-cnx = mysql.connector.connect(user='root',password='password',host='127.0.0.1',database='library')
+cnx = mysql.connector.connect(user='root',password='password',host='localhost',database='library')
 mycursor = cnx.cursor()
 
 firstn = 'Joseph'
-lastn = 'Smith'
-email = 'joseph.smithschooltoday.com'
+lastn = 'Walters'
+email = 'joseph.smith@schooltoday.com'
 cell_phone = '159753126'
 house = '24'
 building = 'Corringham'
