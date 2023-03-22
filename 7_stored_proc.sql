@@ -1,4 +1,6 @@
 use library;
+  
+drop procedure SelectFirst3Books;
 
 -- attempt at creating a stored procedure to grab 3 rows of data
 DELIMITER //
@@ -41,3 +43,5 @@ END //
 DELIMITER ;
 
 CALL BorrowerCount();
+
+
