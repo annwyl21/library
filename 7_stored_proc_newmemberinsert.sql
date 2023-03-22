@@ -18,3 +18,22 @@ DELIMITER ;
 
 CALL NewMember('Abigail', 'Walters', 'abiw@home.com', '123 789 852', '24', 'Corringham', 'my street', 'London', 'G56 7FD');
 select * from borrower;
+
+DELIMITER //
+
+CREATE PROCEDURE New_Book(in bt varchar(50),in pb int)
+BEGIN
+    insert into book(title, published)
+    values(bt,pb);
+    
+END //
+
+DELIMITER ;
+
+CALL New_Book('A Court of Thorns and Roses',2015);
+select * from book;
+
+DELIMITER //
+
+
+
