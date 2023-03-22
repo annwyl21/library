@@ -6,12 +6,15 @@ DROP PROCEDURE NewMember;
 -- attempt at creating a stored procedure to insert new member
 DELIMITER //
 
-CREATE PROCEDURE NewMember(in fn varchar(50), in ln varchar(50), in em varchar(50), in ph varchar(50))
+CREATE PROCEDURE NewMember(in fn varchar(50), in ln varchar(50), in em varchar(50), in ph varchar(50), in hn int, in bu varchar(50), in st varchar(50), in ci varchar(50), po varchar(10))
 BEGIN
-	insert into borrower(first_name, last_name, email, phone)
+    insert into address(house_number, building, street, city, postcode)
+    values(hn, bu, st, ci, po);
+    insert into borrower(first_name, last_name, email, phone)
     values(fn, ln, em, ph);
 END //
 
 DELIMITER ;
 
-CALL NewMember('Abigail', 'Smith', 'abi@home.com', '785 596 562');
+CALL NewMember('Abigail', 'Walters', 'abiw@home.com', '123 789 852', '24', 'Corringham', 'my street', 'London', 'G56 7FD');
+select * from borrower;
